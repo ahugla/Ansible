@@ -6,15 +6,18 @@
 
 # Recuperation des variables
 IPtarget=$1
-Role=$2
+targetRootPassword=$2
+Role=$3
 echo "IP target = $IPtarget"
+echo "Target Root password = $targetRootPassword"
 echo "Role = $Role"
+
 
 PlaybookFile=/etc/ansible/$IPtarget_playbook.yml
 
 
 # Copy de la clé publique sur le target
-sshpass -p changeme ssh-copy-id -o StrictHostKeyChecking=no root@$IPtarget
+sshpass -p $targetRootPassword ssh-copy-id -o StrictHostKeyChecking=no root@$IPtarget
 
 
 # Update du fichier /etc/ansible/hosts    :  Liste les hosts autorises
