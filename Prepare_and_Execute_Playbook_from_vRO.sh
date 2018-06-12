@@ -15,7 +15,7 @@ echo "Role = $Role"
 
 #creation de variables
 PlaybookFile=/etc/ansible/$IPtarget_playbook.yml
-
+echo "PlaybookFile = $PlaybookFile"
 
 # Copy de la clé publique sur le target
 sshpass -p $targetRootPassword ssh-copy-id -o StrictHostKeyChecking=no root@$IPtarget
