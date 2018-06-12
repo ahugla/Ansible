@@ -14,7 +14,7 @@ echo "Role = $Role"
 
 
 #creation de variables
-PlaybookFile=/etc/ansible/$IPtarget_playbook.yml
+PlaybookFile="/etc/ansible/"$IPtarget"_playbook.yml"
 echo "PlaybookFile = $PlaybookFile"
 
 # Copy de la clé publique sur le target
