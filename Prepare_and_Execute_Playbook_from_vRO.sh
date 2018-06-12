@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Deploy a single role on a single target
-# Call depuis le Controler Ansible: Prepare_and_Execute_Playbook_from_vRO   IPTarget     Role
+# Call depuis le Controler Ansible: Prepare_and_Execute_Playbook_from_vRO   IPTarget  TargetRootPassword   Role
 
 
 # Recuperation des variables
@@ -13,6 +13,7 @@ echo "Target Root password = $targetRootPassword"
 echo "Role = $Role"
 
 
+#creation de variables
 PlaybookFile=/etc/ansible/$IPtarget_playbook.yml
 
 
