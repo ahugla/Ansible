@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Deploy a simple role on a single target
+# Deploy a single role on a single target
 # Call depuis le Controler Ansible: Prepare_and_Execute_Playbook_from_vRO   IPTarget     Role
 
 
@@ -17,7 +17,7 @@ PlaybookFile=/etc/ansible/$IPtarget_playbook.yml
 sshpass -p changeme ssh-copy-id -o StrictHostKeyChecking=no root@$IPtarget
 
 
-# Update du fichier /etc/ansible/hosts    :  Liste les hosts autorisés
+# Update du fichier /etc/ansible/hosts    :  Liste les hosts autorises
 echo "$IPtarget" >> /etc/ansible/hosts
 
 
