@@ -33,6 +33,8 @@ echo "- hosts: all" >> $PlaybookFile
 echo "  roles:" >> $PlaybookFile
 echo "  - $Role" >> $PlaybookFile
 
+
+# Execute Playbook
 ansible-playbook  -i "$IPtarget," $PlaybookFile
 
 
