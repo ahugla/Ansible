@@ -10,6 +10,6 @@
       shell: |
         date +"%d-%b-%y  -  %T" >> /tmp/ansible.log
         exit 0
-    - name: Display the config
+    - name: Message
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+        msg: "TERMINE"
