@@ -7,7 +7,7 @@
         name: vi
         state: latest
     - name: log date into file
-      shell: 
+      shell: |
         date +"%d-%b-%y  -  %T" >> /tmp/ansible.log
         exit 0
     - name: Display the config
