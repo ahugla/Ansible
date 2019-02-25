@@ -7,8 +7,9 @@
         name: vi
         state: latest
     - name: log date into file
-      command: date +"%d-%b-%y  -  %T" >> /tmp/ansible.log
+      shell: 
+        date +"%d-%b-%y  -  %T" >> /tmp/ansible.log
+        exit 0
     - name: Display the config
       debug:
         msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
-    
