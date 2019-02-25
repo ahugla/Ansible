@@ -4,5 +4,5 @@
   tasks:
     - name: Hello Message
       debug:
-msg: "Hello World!"
-#shell: echo "Hi! Tower is working."
+        msg: "Hello World!"
+        #shell: echo "Hi! Tower is working."
