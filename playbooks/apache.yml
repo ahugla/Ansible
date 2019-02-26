@@ -1,4 +1,5 @@
 - name: Install Apache
+  hosts: all
   yum:
     name: httpd
     state: latest

@@ -1,4 +1,5 @@
 - name: Install Tomcat
+  hosts: all
   yum:
     name: tomcat
     state: latest
