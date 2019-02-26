@@ -1,6 +1,13 @@
-- name: Install Tomcat
-  hosts: all
-  yum:
-    name: tomcat
-    state: latest
+- hosts: all
+  name: Install Tomcat
+  
+  tasks:
+    - name: install Tomcat
+      package:
+        name: tomcat
+        state: present
 
+    - name: start Tomcat
+      service:
+        name: tomcat
+        state: started

@@ -1,0 +1,8 @@
+- hosts: all
+  name: Install Netcat
+  
+  tasks:
+    - name: Install Netcat
+      package:
+        name: nc
+        state: present

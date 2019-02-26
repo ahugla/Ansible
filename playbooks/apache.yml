@@ -1,6 +1,13 @@
-- name: Install Apache
-  hosts: all
-  yum:
-    name: httpd
-    state: latest
+- hosts: all
+  name: Install the apache web service
+  
+  tasks:
+    - name: install apache
+      package:
+        name: httpd
+        state: present
 
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
