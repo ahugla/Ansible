@@ -1,0 +1,5 @@
+- name: Install Tomcat
+  yum:
+    name: tomcat
+    state: latest
+

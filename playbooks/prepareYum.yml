@@ -1,0 +1,8 @@
+- name: Prepare yum
+  hosts: all
+  tasks:
+    - name: update yum repo
+      shell: |
+        yum clear all
+        yum repolist
+        exit 0
