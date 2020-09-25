@@ -1,0 +1,13 @@
+- hosts: all
+  name: Install the apache web service
+  
+  tasks:
+    - name: install apache
+      package:
+        name: "{{ variable1 }}"
+        state: present
+
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
