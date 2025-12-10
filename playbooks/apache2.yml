@@ -1,0 +1,13 @@
+- hosts: localhost
+  name: Install the apache web service
+  
+  tasks:
+    - name: install apache
+      package:
+        name: httpd
+        state: present
+
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
