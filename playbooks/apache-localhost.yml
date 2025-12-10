@@ -10,5 +10,5 @@
     - name: start httpd
       service:
         name: httpd
-        #state: started
-        state: stopped
+        state: started
+        #state: stopped
